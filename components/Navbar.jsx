@@ -19,7 +19,6 @@ function Navbar() {
             className="h-auto w-auto object-contain"
           />
 
-        {/* Mobile Menu Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-700 focus:outline-none"
@@ -27,7 +26,7 @@ function Navbar() {
           ☰
         </button>
 
-        {/* Desktop Navigation */}
+      
         <ul className="hidden md:flex space-x-6">
           <li>
             <Link href="/" className={path === "/" ? "text-green-500 font-bold" : "text-gray-700 hover:text-green-500"}>Home</Link>
@@ -45,8 +44,6 @@ function Navbar() {
             <Link href="/Contact" className={path === "/Contact" ? "text-green-500 font-bold" : "text-gray-700 hover:text-green-500"}>Contact</Link>
           </li>
         </ul>
-
-        {/* Common Buttons (Always Visible) */}
         <div className="flex space-x-2">
           <Link href="/Login" className="bg-green-500 text-white px-4 py-2 rounded-md">
             Login
@@ -55,7 +52,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Navigation (Dropdown instead of full screen) */}
+      {/* small screens navigation bar */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-lg flex flex-col items-center py-4 space-y-2">
           <ul className="flex flex-col space-y-2 text-lg w-full text-center">
